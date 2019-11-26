@@ -1,0 +1,36 @@
+{
+  "name": "sass-node",
+  "version": "1.0.0",
+  "description": "simple SaaS with node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htam00/sassnode.git"
+  },
+  "keywords": [
+    "aas"
+  ],
+  "author": "htam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/htam00/sassnode/issues"
+  },
+  "homepage": "https://github.com/htam00/sassnode#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.7.12",
+    "morgan": "^1.9.1",
+    "object-hash": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
