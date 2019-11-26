@@ -7,18 +7,32 @@ const Contacts = require('./models/Contacts')
 const title = "Sano"
 router.get('/', (req, res, next) => {
         res.render('index', {title: title})
-        next()
+        
 })
 
 
-router.post('/', (req, res, next) => {			
-        let newUser = new Users({
-		name: req.body.name,
-		email: req.body.email,
-		password: hash.sha1(req.body.password)
+router.post('/signup', (req, res, next) => {
+	Users.findOne({
+		email: req.body.email
+	}, (err, user) => {
+		if(err) return next(err)
+		if(user) return next({
+			message: "User already exists"
+		})
+        	let newUser = new Users({
+			name: req.body.name,
+			email: req.body.email,
+			password: hash.sha1(req.body.password)
+		})
+		newUser.save(err => { 
+			if(!err) console.log("User Salved")
+		})
 	})
-	res.send(req.body.name)
-	newUser.save()
+	res.send(`<p>${req.body.name}</p>`)
+})
+
+router.get('/signup', (req,res) => {
+	res.render('signup', {title: title})
 })
 
 router.get('/blog', (req, res) => {                                   res.render('blog', {title: title})

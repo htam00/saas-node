@@ -1,0 +1,42 @@
+/* @All Tags*/
+*{
+ margin: 0;
+ padding: 0;
+ }
+a{
+ text-decoration: none;
+ }
+
+nav{
+ display: none;
+ }
+
+.brand{
+	color: green;
+	padding: 1%;
+	box-shadow: 1px 1px 1px #ccc;
+}
+
+/* @Form */
+.form{	
+	width: 100%;
+	background: #000;
+}
+.form .title{
+	text-align: center;
+	color: #fff;
+}
+
+.form-input{
+	width: 50%;
+	margin: auto;
+	padding: 12px;
+}
+.form-input input{
+	padding: 12px 20px;
+	box-sizing: border-box;
+}
+.form-input button{
+	padding: 10px;
+	border-radius: 5px;
+}
