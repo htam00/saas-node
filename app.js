@@ -1,7 +1,5 @@
 const express = require('express')
-const path = require('path')
 const layouts = require('express-ejs-layouts')
-const logger = require('morgan')
 const bodyP = require('body-parser')
 const app = express()
 
